@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4ah!9r@7@!r)ncnrzn2^=jey-!$@b#r#d*xnojw0brf9d5x!!(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,19 +75,29 @@ WSGI_APPLICATION = 'todoapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'todo_db',
+#         'USER': 'postgres',
+#         'PASSWORD': '123456',
+#         'HOST': 'tododb',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'vSsiaHy9bOc8UjRjn8rI',
-        'HOST': 'containers-us-west-116.railway.app',
-        'PORT': '6363',
-
+        'PASSWORD': '123456',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-36b5.up.railway.app']
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
